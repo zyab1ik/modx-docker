@@ -15,12 +15,3 @@
 2. For changing modx version you have to change build/Dockerfile: ``ARG MODX_VERSION=2.8.3``
    1. The last version of modx is located [here](https://modx.com/download)
 3. The Caddy web server is an extensible, cross-platform, open-source web server written in Go. More information [here](https://caddyserver.com/)
-
-
-### Contact details
-
----
-Abramov Aleksandr
-* Mob (Cy): `+357 (968) 0-12-12`
-* Telegram: [zyab1ik](https://t.me/zyab1ik)
-* E-mail: `sashka.abramov@gmail.com`
