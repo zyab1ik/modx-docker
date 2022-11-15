@@ -2,12 +2,13 @@ FROM php:8.1-fpm-alpine
 
 EXPOSE 9000
 
-RUN apk add --no-cache rsync freetype-dev libpng-dev jpeg-dev unzip sudo bash gettext \
+RUN apk add --no-cache rsync freetype-dev libpng-dev jpeg-dev unzip sudo bash gettext libzip-dev zip \
 	&& docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install -j$(nproc) gd opcache mysqli pdo pdo_mysql \
+    && docker-php-ext-install zip \
 	&& rm -rf /usr/src/php/
 
-ARG MODX_VERSION=2.8.3
+ARG MODX_VERSION=3.0.1
 ENV MODX_VERSION ${MODX_VERSION}
 
 # upstream tarballs include ./modx-${MODX_VERSION}/

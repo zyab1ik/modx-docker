@@ -70,7 +70,7 @@ if [ "$1" == php-fpm ]; then
 		echo "$MODX_VERSION" >/modx/core/config/install_version.txt
 
 		setup_config_core
-		
+
 		echo "Complete! MODX has been successfully installed" >&2
   else
 		UPGRADE=$(TERM=dumb php -- "$MODX_VERSION" </docker-entrypoint/compare-version.php)

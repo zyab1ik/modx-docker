@@ -35,6 +35,8 @@ services:
     image: 'mariadb:latest'
     restart: unless-stopped
     env_file: .env
+    ports:
+      - "3306:3306"
     environment:
       MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 0
       MARIADB_RANDOM_ROOT_PASSWORD: 1
@@ -43,7 +45,7 @@ services:
     networks:
       - db_net
 
-volumes: 
+volumes:
   caddy_data:
   mariadb_data:
   modx_config:
