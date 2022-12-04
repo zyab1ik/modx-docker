@@ -8,7 +8,7 @@ RUN apk add --no-cache rsync freetype-dev libpng-dev jpeg-dev unzip sudo bash ge
     && docker-php-ext-install zip \
 	&& rm -rf /usr/src/php/
 
-ARG MODX_VERSION=3.0.1
+ARG MODX_VERSION=3.0.2
 ENV MODX_VERSION ${MODX_VERSION}
 
 # upstream tarballs include ./modx-${MODX_VERSION}/
